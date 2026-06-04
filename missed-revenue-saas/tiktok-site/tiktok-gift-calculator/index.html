@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TikTok Gift Value Calculator (2026)</title>
+<meta name="description" content="Calculate TikTok gift values instantly. Select any gift and see its USD worth.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {font-family:Arial;max-width:800px;margin:40px auto;padding:0 15px;text-align:center;}
+.btn {display:inline-block;margin-bottom:20px;padding:10px;background:#007BFF;color:white;text-decoration:none;border-radius:6px;}
+select,input {padding:10px;width:220px;margin-top:10px;}
+.section {margin-top:40px;text-align:left;}
+</style>
+</head>
+
+<body>
+
+<a class="btn" href="/">← Coins Calculator</a>
+
+<h1>🎁 TikTok Gift Value Calculator (2026)</h1>
+
+<p>Select a gift and enter quantity to calculate earnings.</p>
+
+<select id="gift">
+  <option value="225">🦁 Lion ($200–$250)</option>
+  <option value="7">🌌 Galaxy ($6–$8)</option>
+  <option value="0.005">🌹 Rose ($0.005)</option>
+  <option value="275">🪐 Universe ($250–$300)</option>
+  <option value="175">🐋 Whale ($150–$200)</option>
+  <option value="1.2">🎆 Fireworks ($1–$2)</option>
+  <option value="0.01">💖 Heart ($0.01)</option>
+  <option value="6">🎤 Mic ($5–$8)</option>
+  <option value="25">🎮 Gaming Chair ($20–$30)</option>
+</select>
+
+<br>
+
+<input type="number" id="amount" placeholder="Enter quantity">
+<p id="result"></p>
+
+<script>
+function calculate(){
+let val=document.getElementById("gift").value;
+let amt=document.getElementById("amount").value;
+
+if(!amt||amt<=0){
+document.getElementById("result").innerText="";
+return;
+}
+
+let total=val*amt;
+
+document.getElementById("result").innerText=
+"Estimated Earnings: $"+total.toFixed(2);
+}
+
+document.getElementById("amount").addEventListener("input",calculate);
+document.getElementById("gift").addEventListener("change",calculate);
+</script>
+
+<div class="section">
+<img src="/logo.jpg" alt="Berners Builds Logo" width="180" style="margin-bottom:20px;border-radius:12px;">
+<h2>Explore TikTok Gift Values</h2>
+<ul>
+<li><a href="/tiktok-lion-gift-value">🦁 Lion</a></li>
+<li><a href="/tiktok-galaxy-gift-value">🌌 Galaxy</a></li>
+<li><a href="/tiktok-rose-gift-value">🌹 Rose</a></li>
+<li><a href="/tiktok-universe-gift-value">🪐 Universe</a></li>
+<li><a href="/tiktok-whale-gift-value">🐋 Whale</a></li>
+<li><a href="/tiktok-diamonds-value">💎 Diamonds</a></li>
+<li><a href="/tiktok-fireworks-gift-value">🎆 Fireworks</a></li>
+<li><a href="/tiktok-heart-gift-value">💖 Heart</a></li>
+<li><a href="/tiktok-mic-gift-value">🎤 Mic</a></li>
+<li><a href="/tiktok-gaming-chair-gift-value">🎮 Gaming Chair</a></li>
+</ul>
+</div>
+</body>
+</html>
