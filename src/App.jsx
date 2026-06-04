@@ -1,7 +1,5 @@
-import Doctor from "./pages/Doctor";
-import MasterLanding from "./pages/Barber";
-import Barber from "./pages/Barber";
+import BeautyClinic from "./pages/BeautyClinic";
 
 export default function App() {
-  return <Barber />;
+  return <BeautyClinic />;
 }
